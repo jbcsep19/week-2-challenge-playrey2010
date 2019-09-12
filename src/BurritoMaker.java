@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class BurritoMaker {
     public static void main(String[] args) {
-
-        System.out.println(burritoMaker());
+        for (int i=1; i<=25; i++)
+            System.out.println("Burrito " + i + ": "+ burritoMaker());
 
     }
 
@@ -39,6 +39,26 @@ public class BurritoMaker {
         if (meat.equals("chk, stk, crn, chz, sfr, vggs")) {
             price += 3.0;
         }
+        if (beans.equals("pinto beans") || beans.equals("black beans")) {
+            price += .5;
+        }
+        if (salsa.equals("mild salsa") || salsa.equals("medium salsa") || salsa.equals("hot salsa")){
+            price += .5;
+        }
+        if (salsa.equals("mild, medium and hot salsa")) {
+            price += 1.5;
+        }
+        if (veggies.equals("lettuce") || veggies.equals("fajita veggies")) {
+            price += .5;
+        }
+        if (veggies.equals("lettuce and f.veggies")) {
+            price += 1.0;
+        }
+        if (cheese.equals("cheese")) {price += .5;}
+        if (guac.equals("guac")) {price += .5;}
+        if (queso.equals("queso")) {price += .5;}
+        if (sourCream.equals("sour cream")) {price += .5;}
+
 
 
 
