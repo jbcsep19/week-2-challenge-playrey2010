@@ -5,7 +5,7 @@ import java.util.Random;
 public class BurritoMaker {
     public static void main(String[] args) {
         for (int i=1; i<=25; i++)
-            System.out.println("Burrito " + i + ": "+ burritoMaker());
+            System.out.println("Burrito " + i + ": "+ burritoMaker() + "\n");
 
     }
 
