@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class BurritoMaker {
     public static void main(String[] args) {
+        System.out.println("Price guide: base burrito is $3.00, EACH additional item is $0.50.\nFor more than one item per category (e.g. \"white & brown rice\"), you will be charged individually for each item ($1.00).\n");
         for (int i=1; i<=25; i++)
             System.out.println("Burrito " + i + ": "+ burritoMaker() + "\n");
 
@@ -21,8 +22,6 @@ public class BurritoMaker {
         String sourCream = sourCreamPicker();
         double price = 3.0;
         NumberFormat currency = NumberFormat.getCurrencyInstance();
-//        String burrito = rice + ", " + meat + ", " + beans + ", " + salsa + ", " + veggies + ", "
-//                + cheese + ", " + guac + ", " + queso + ", " + sourCream + "\tPrice: " + currency.format(price);
 
 
         // price controller
@@ -142,7 +141,7 @@ public class BurritoMaker {
         String [] cheese = new String[2];
         cheese[0] = "cheese";
         cheese[1] = "no cheese";
-        return cheese[r.nextInt(2)];
+        return cheese[r.nextInt(cheese.length)];
     }
 
     public static String guacPicker () {
@@ -150,7 +149,7 @@ public class BurritoMaker {
         String [] guac = new String[2];
         guac[0] = "guac";
         guac[1] = "no guac";
-        return guac[r.nextInt(2)];
+        return guac[r.nextInt(guac.length)];
     }
 
     public static String quesoPicker () {
@@ -158,7 +157,7 @@ public class BurritoMaker {
         String [] queso = new String[2];
         queso[0] = "queso";
         queso[1] = "sin queso";
-        return queso[r.nextInt(2)];
+        return queso[r.nextInt(queso.length)];
     }
 
     public static String sourCreamPicker () {
@@ -166,6 +165,6 @@ public class BurritoMaker {
         String [] sourCream = new String[2];
         sourCream[0] = "sour cream";
         sourCream[1] = "no sour cream";
-        return sourCream[r.nextInt(2)];
+        return sourCream[r.nextInt(sourCream.length)];
     }
 }
