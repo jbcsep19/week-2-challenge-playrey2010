@@ -5,10 +5,15 @@ import java.util.Random;
 public class BurritoMaker {
     public static void main(String[] args) {
         System.out.println("Price guide: base burrito is $3.00, EACH additional item is $0.50.\nFor more than one item per category (e.g. \"white & brown rice\"), you will be charged individually for each item ($1.00).\n");
-        for (int i=1; i<=25; i++)
-            System.out.println("Burrito " + i + ": "+ burritoMaker() + "\n");
-
+        String[] burritos = new String[25];
+        for (int i=0; i<25; i++) {
+            burritos[i] = "Burrito " + (i+1) + ": "+ burritoMaker() + "\n";
+        }
+        for (int i=0; i<25; i++) {
+            System.out.println(burritos[i]);
+        }
     }
+
 
     public static String burritoMaker() {
         String rice = ricePicker();
